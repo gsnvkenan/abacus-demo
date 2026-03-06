@@ -1,0 +1,131 @@
+body {
+    background-image: url('./assets/bg.jpg');
+    background-size: 100% 100%; /* Tam olarak ekran boyutuna zorlar */
+    background-attachment: fixed;
+    margin: 0;
+
+}
+
+@media (max-width:768px){
+    body {
+    background-image: url('./assets/bg.jpg');
+    
+    background-size: cover;        
+    background-position: center;   
+    background-attachment: fixed;  
+    background-repeat: no-repeat;  
+    
+    min-height: 100vh;
+    margin: 0;
+}
+}
+
+.body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.abacus{
+    background:url('./assets/abacus2.png');
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 60vh;
+    height: 80vh;
+
+    padding:4% 2.2% 2.4% 2.7%; 
+    
+}
+.abacus .abac-center{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.abac-center .abac-top{
+    padding-top: 2%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap:22px;
+}
+.abac-center .abac-bottom{
+    display: flex;
+    flex-direction: column;
+    gap:22px;
+    width: 100%;
+    padding-bottom: 3%;
+}
+.abacus .balls{
+    width: 100%;
+    height: 5.5vh;
+    display: flex;
+    gap:2px;
+}
+
+.abacus .ball{
+    background:url('./assets/ball.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 100%;
+    width: 3vh;
+    cursor: pointer;
+}
+.aCount{
+    position: absolute;
+    top:5%;
+    background-color: #37231c;
+    border: 3px solid #5c4136;
+    box-shadow: 0px 0px 0px 5px black;
+    padding: 10px;
+    rotate: 180deg;
+    border-radius: 0%;
+    color: #f6dda4;
+    font-size: 55px;
+}
+.bCount{
+    position: absolute;
+    bottom:5%;
+    background-color: #37231c;
+    border: 3px solid #5c4136;
+    box-shadow: 0px 0px 0px 5px black;
+    padding: 10px;
+    border-radius: 0%;
+    color: #f6dda4;
+    font-weight: 100;
+    font-size: 55px;
+}
+.ball-left{
+    display: flex;
+    gap:2px;
+    margin-left: auto;
+}
+.abacus .ball2{
+    background:url('./assets/ball.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 100%;
+    width: 3vh;
+    cursor: pointer;
+}
+@media (max-width:768px){
+    .abacus{
+        width: 50vh;
+        height: 70vh;
+        padding: 13% 5% 10% 7%;
+    }
+    .abacus .abac-bottom{
+        gap:17px;
+    }
+    .abacus .balls{
+
+        width: 100%;
+        height: 5.5vh;
+        display: flex;
+        gap:2px;
+    }
+    
+
+}
