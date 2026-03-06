@@ -3,7 +3,7 @@ body {
     background-size: 100% 100%; /* Tam olarak ekran boyutuna zorlar */
     background-attachment: fixed;
     margin: 0;
-
+    background-color: #37231c;
 }
 
 @media (max-width:768px){
@@ -14,17 +14,16 @@ body {
     background-position: center;   
     background-attachment: fixed;  
     background-repeat: no-repeat;  
-    
-    min-height: 100vh;
     margin: 0;
+    background-color: #37231c;
 }
 }
 
 .body{
     display: flex;
+    margin-top:60px;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
+
 }
 .abacus{
     background:url('./assets/abacus2.png');
@@ -49,7 +48,7 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap:22px;
+    gap:15px;
 }
 .abac-center .abac-bottom{
     display: flex;
@@ -73,29 +72,53 @@ body {
     width: 3vh;
     cursor: pointer;
 }
+.aPlayer{
+    position:absolute;
+    width:90%;
+    height:9%;
+    top:0;
+    display:flex;
+    justify-content:center;
+}
 .aCount{
-    position: absolute;
-    top:5%;
+
     background-color: #37231c;
     border: 3px solid #5c4136;
     box-shadow: 0px 0px 0px 5px black;
-    padding: 10px;
+    width:50%;
+    text-align:center;
+    font-size:55px;
     rotate: 180deg;
     border-radius: 0%;
     color: #f6dda4;
-    font-size: 55px;
 }
-.bCount{
-    position: absolute;
-    bottom:5%;
+.bPlayer{
+    position:absolute;
+    width:90%;
+    height:9%;
+    bottom:0;
+    display:flex;
+    justify-content:center;
+}
+.bButton{
     background-color: #37231c;
     border: 3px solid #5c4136;
     box-shadow: 0px 0px 0px 5px black;
-    padding: 10px;
+    width:50%;
+    text-align:center;
+    font-size:55px;
     border-radius: 0%;
     color: #f6dda4;
-    font-weight: 100;
-    font-size: 55px;
+}
+.bCount{
+    background-color: #37231c;
+    border: 3px solid #5c4136;
+    box-shadow: 0px 0px 0px 5px black;
+    width:50%;
+    text-align:center;
+    font-size:55px;
+    border-radius: 0%;
+    color: #f6dda4;
 }
 .ball-left{
     display: flex;
@@ -118,6 +141,7 @@ body {
     }
     .abacus .abac-bottom{
         gap:17px;
+        padding-bottom:0%;
     }
     .abacus .balls{
 

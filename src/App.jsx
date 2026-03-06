@@ -22,12 +22,30 @@ function App() {
     setCountB(countB-n)
   }
 
+  const ballIncreaseBwB=()=>{
+    ballIncreaseB(5);
+    if(B_3<=0){
+      ballIncreaseB(10);
+      setB_3(10);setB_2(B_2-1)
+    }
+    else{
+      setB_3(B_3-1)
+    }
+
+    if(B_2<=0){
+      ballIncreaseB(100);
+      setB_2(10);setB_1(B_1-1)
+    }
+  }
+
 
 
   return (
     <>
       <div className='body'>
-        <h1 className='aCount'>{countA}</h1>    
+          <div className='aPlayer'>
+            <h1 className='aCount'>{countA}</h1>
+          </div>
           <div className='abacus'>
             <div className='abac-center'>
               <div className='abac-top'>
@@ -79,11 +97,11 @@ function App() {
 
                 <div className='balls'>
                 {Array.from({ length: B_1 }).map((_, key) => (
-                        <div key= {key} className='ball'onClick={()=>{ballIncreaseB(5);setB_1(B_1-1)}} ></div>
+                        <div key= {key} className='ball'onClick={()=>{ballIncreaseB(100);setB_1(B_1-1)}} ></div>
                 ))}
                   <div className='ball-left'>
                     {Array.from({ length: 10-B_1 }).map((_, key) => (
-                        <div key= {key} className='ball2'onClick={()=>{ballDecreaseB(5);setB_1(B_1+1)}} ></div>
+                        <div key= {key} className='ball2'onClick={()=>{ballDecreaseB(100);setB_1(B_1+1)}} ></div>
                 ))}
                   </div>
                 </div>
@@ -105,18 +123,22 @@ function App() {
 
                 <div className='balls'>
                 {Array.from({ length: B_3 }).map((_, key) => (
-                        <div key= {key} className='ball'onClick={()=>{ballIncreaseB(100);setB_3(B_3-1)}} ></div>
+                        <div key= {key} className='ball'onClick={()=>{ballIncreaseB(5);setB_3(B_3-1)}} ></div>
                 ))}
                 <div className='ball-left'>
                     {Array.from({ length: 10-B_3 }).map((_, key) => (
-                        <div key= {key} className='ball2'onClick={()=>{ballDecreaseB(100);setB_3(B_3+1)}} ></div>
+                        <div key= {key} className='ball2'onClick={()=>{ballDecreaseB(5);setB_3(B_3+1)}} ></div>
                 ))}
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        <h1 className='bCount'>{countB}</h1>  
+       <div className='bPlayer'>
+           <button className='bButton' onClick={ballIncreaseBwB}>-</button>
+            <h1 className='bCount'>{countB}</h1>
+            <button className='bButton' onClick={ballIncreaseBwB}>+</button>
+          </div>
       </div>
     </>
   )
